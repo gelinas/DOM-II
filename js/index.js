@@ -27,7 +27,7 @@ let navLinks = document.querySelectorAll(".nav-link");
 
 navLinks.forEach(element => {
     element.addEventListener('mouseenter', (event) => {
-        element.style.backgroundColor = "green";
+        TweenMax.to(element, 1, {backgroundColor:"green"});
       });
 });
 
@@ -94,8 +94,7 @@ window.addEventListener('load', (event) => {
 
 pageImages.forEach(element => {
     element.addEventListener('dblclick', (event) => {
-        element.style.transform = "scale(1.1)";
-        element.style.transition = 'all 0.5s';
+        TweenMax.to(element, 2, {scale:1.3});
     });
 });
 
@@ -116,9 +115,9 @@ window.addEventListener('wheel', (event) => {
 
 ## Stretch Task:
 
-* [ ] Go look at [GSAP](https://greensock.com/) and implement the animations found in that library with your custom events.
+* [X] Go look at [GSAP](https://greensock.com/) and implement the animations found in that library with your custom events.
 
 ## Stretch assignment
 
-* [ ] Take a look at the [stretch assignment](stretch-assignment) and follow the instructions in the read me file.
+* [X] Take a look at the [stretch assignment](stretch-assignment) and follow the instructions in the read me file.
 */
