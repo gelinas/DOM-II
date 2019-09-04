@@ -92,8 +92,24 @@ window.addEventListener('load', (event) => {
 
 // dblclick
 
-window.addEventListener('load', (event) => {
-    pageImages[0].setAttribute('src', "https://images.unsplash.com/photo-1517606400858-ba377e7e66d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2042&q=80");
+pageImages.forEach(element => {
+    element.addEventListener('dblclick', (event) => {
+        element.style.transform = "scale(1.1)";
+        element.style.transition = 'all 0.5s';
+    });
+});
+
+// scroll
+
+window.addEventListener('scroll', (event) => {
+    header.style.backgroundColor = "lightgray";
+});
+
+// wheel
+let containerHome = document.querySelector(".home");
+
+window.addEventListener('wheel', (event) => {
+    containerHome.style.backgroundColor = "darkgray";
 });
 
 /*
